@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "React_PWA",
+  "name": "React PWA Boilerplate",
+  "author":"Srikanth Lakshminarayan",
   "icons": [
     {
       "src": "favicon.ico",
