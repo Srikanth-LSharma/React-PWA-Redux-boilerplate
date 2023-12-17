@@ -1,18 +1,19 @@
 import React from 'react';
-import logo from './assets/logo.svg';
+// import logo from './assets/logo.svg';
 import './App.css';
+import AppRouter from './Routes';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit
           {' '}
           <code>src/App.js</code>
           {' '}
-          and save to reload.
+          and save to reload.11
         </p>
         <a
           className="App-link"
@@ -22,7 +23,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <AppRouter />
     </div>
   );
 }

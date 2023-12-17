@@ -1,7 +1,7 @@
 /* eslint-disable */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 export const About = (props) => {
   return <div>About</div>;
@@ -11,8 +11,8 @@ About.propTypes = {
   second: PropTypes.third
 };
 
-const mapStateToProps = (state) => ({});
+// const mapStateToProps = (state) => ({});
 
-const mapDispatchToProps = {};
+// const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(About);
+export default About;
