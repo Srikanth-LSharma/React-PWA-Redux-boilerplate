@@ -8,7 +8,7 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "airbnb",
-        "prettier"
+        "prettier" 
     ],
     "settings":{
         "react":{
@@ -16,15 +16,19 @@
         }
     },
     "parserOptions": {
+        "ecmaFeatures": {
+            "jsx":true
+        },
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react","prettier" //always keep prettier at last so it can override anything coming before it
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-props-no-spreading":["warn"],
         "spaced-comment":[2,"always"],
         "react/function-component-definition":[
             "error",
