@@ -1,6 +1,7 @@
-import commonConfig from './webpack.common';
-
+const { merge } = require('webpack-merge');
 const path = require('path');
+const commonConfig = require('./webpack.common');
+
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const Dotenv = require('dotenv-webpack');
 // const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
@@ -8,7 +9,7 @@ const path = require('path');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
-export default merge.smart(commonConfig, {
+module.exports = merge(commonConfig, {
     mode: 'production',
     performance: {
         hints: false
