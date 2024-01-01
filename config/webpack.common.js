@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const { EsbuildPlugin } = require('esbuild-loader');
 
 module.exports = {
     mode: process.env.REACT_APP_WEBPACK_MODE,
@@ -57,6 +58,10 @@ module.exports = {
                         ]
                     }
                 }
+            }),
+            new EsbuildPlugin({
+                target: 'es2015',
+                css: true
             })
         ]
     },
@@ -66,34 +71,47 @@ module.exports = {
                 test: /\.(jpe?go|pngo|gifo|svgo)$/i,
                 type: 'asset'
             },
+            // Use esbuild to compile JavaScript & TypeScript
             {
-                test: /\.js$/,
+                // Match `.js`, `.jsx`, `.ts` or `.tsx` files
+                test: /\.[jt]sx?$/,
                 exclude: path.resolve(__dirname, '..', 'node_modules'),
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            compact: false,
-                            presets: ['@babel/preset-env', '@babel/preset-react'],
-                            plugins: ['@babel/plugin-proposal-class-properties']
-                        }
-                    }
-                ]
+                loader: 'esbuild-loader',
+                options: {
+                    // Treat `.js` files as `.jsx` files
+                    loader: 'jsx',
+                    // JavaScript version to compile to
+                    target: 'es2015'
+                }
             },
             {
                 test: /\.(scss|css)$/,
+                exclude: path.resolve(__dirname, 'node_modules'),
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
+                    'css-loader',
                     {
-                        loader: 'css-loader',
+                        loader: 'esbuild-loader',
                         options: {
-                            importLoaders: 2,
-                            sourceMap: false,
-                            modules: false
+                            minify: true
                         }
                     }
                 ]
             },
+            // {
+            //     test: /\.(scss|css)$/,
+            //     use: [
+            //         MiniCssExtractPlugin.loader,
+            //         {
+            //             loader: 'css-loader',
+            //             options: {
+            //                 importLoaders: 2,
+            //                 sourceMap: false,
+            //                 modules: false
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /\.(png|jpg|gif|ico)$/,
                 use: [
@@ -163,10 +181,10 @@ module.exports = {
             template: path.resolve(__dirname, '..', 'public/index.html'),
             favicon: path.resolve(__dirname, '..', 'public/favicon.ico')
         }),
-        new MiniCssExtractPlugin({
-            filename: 'styles.[contenthash].css',
-            chunkFilename: '[id].css'
-        }),
+        // new MiniCssExtractPlugin({
+        //     filename: 'styles.[contenthash].css',
+        //     chunkFilename: '[id].css'
+        // }),
         new Dotenv({
             path: path.resolve(__dirname, '..', '.env.development')
         })

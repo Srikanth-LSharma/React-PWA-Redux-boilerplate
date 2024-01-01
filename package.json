@@ -33,8 +33,8 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env.development  webpack-dev-server --history-api-fallback --config=./config/webpack.dev.js --open",
+    "build": "env-cmd -f .env.development yarn run dev && webpack --config=./config/webpack.common.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
@@ -72,7 +72,8 @@
     "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
     "mini-css-extract-plugin": "^2.7.6",
-    "prettier": "^3.1.1"
+    "prettier": "^3.1.1",
+    "webpack-merge": "^5.10.0"
   },
   "husky": {
     "hooks": {
