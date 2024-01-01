@@ -1,3 +1,12 @@
+import commonConfig from './webpack.common';
+
+const path = require('path');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const Dotenv = require('dotenv-webpack');
+// const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+// const { EsbuildPlugin } = require('esbuild-loader');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 export default merge.smart(commonConfig, {
     mode: 'development',
     performance: {
