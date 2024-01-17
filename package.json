@@ -34,14 +34,19 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "env-cmd -f .env.development  webpack-dev-server --history-api-fallback --config=./config/webpack.dev.js --open",
-    "build": "env-cmd -f .env.development yarn run dev && webpack --config=./config/webpack.common.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "rimraf build",
+    "start": "env-cmd -f .env.development  webpack-dev-server --config=./config/webpack.config.js --open",
+    "craco": "craco --config=./config/craco.config.js",
+    "build": "npm run dev && webpack --config=./config/webpack.common.js",
+    "test": "npm run craco test",
+    "eject": "craco eject",
     "lint": "eslint .",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write './**/*.{js,jsx,md,json}' --config ./.prettierrc",
     "prepare": "husky install"
+  },
+  "craco": {
+    "configFile": "./config/craco.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -62,7 +67,9 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "compression-webpack-plugin": "^10.0.0",
+    "craco-esbuild": "^0.5.2",
     "dotenv-webpack": "^8.0.1",
     "env-cmd": "^10.1.0",
     "esbuild-loader": "^4.0.2",
