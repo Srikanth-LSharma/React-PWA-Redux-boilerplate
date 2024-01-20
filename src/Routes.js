@@ -8,7 +8,6 @@ import About from './containers/About';
 import Contact from './containers/Contact';
 
 function AppRouter() {
-    console.log("Test commit for github push");
     return (
         <Routes>
             <Route exact path={urls?.HOME} element={<Home />} />
