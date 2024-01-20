@@ -177,7 +177,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', 'public/index.html'),
-            favicon: path.resolve(__dirname, '..', 'public/favicon.ico')
+            favicon: path.resolve(__dirname, '..', 'public/favicon.ico'),
+            manifest: path.resolve(__dirname, '..', 'public/manifest.json')
         }),
         // new MiniCssExtractPlugin({
         //     filename: 'styles.[contenthash].css',
