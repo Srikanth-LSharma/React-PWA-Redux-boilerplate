@@ -5,6 +5,8 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 const { EsbuildPlugin } = require('esbuild-loader');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     mode: process.env.REACT_APP_WEBPACK_MODE,
@@ -187,5 +189,18 @@ module.exports = {
         new Dotenv({
             path: path.resolve(__dirname, '..', '.env.development')
         })
+        // ,
+        // new WorkboxPlugin.GenerateSW({
+        //     // these options encourage the ServiceWorkers to get in there fast
+        //     // and not allow any straggling "old" SWs to hang around
+        //     clientsClaim: true,
+        //     skipWaiting: true
+        // }),
+        // new CopyWebpackPlugin({
+        //     patterns: [
+        //         { from: 'public/assets', to: 'assets' },
+        //         { from: 'public/manifest.json', to: 'manifest.json' }
+        //     ]
+        // })
     ]
 };

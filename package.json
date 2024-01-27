@@ -34,9 +34,9 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "dev":"rimraf build",
-    "start": "env-cmd -f .env.development  webpack-dev-server --history-api-fallback --config=./config/webpack.dev.js --open",
-    "build": "env-cmd -f .env.development npm run dev && webpack --config=./config/webpack.common.js",
+    "dev": "rimraf build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
