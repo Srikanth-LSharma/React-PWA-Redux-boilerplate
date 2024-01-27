@@ -42,7 +42,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write './**/*.{js,jsx,md,json}' --config ./.prettierrc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postbuild": "node config/copyFiles.js"
   },
   "eslintConfig": {
     "extends": [
