@@ -5,7 +5,8 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 const { EsbuildPlugin } = require('esbuild-loader');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { InjectManifest } = require('workbox-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
@@ -170,6 +171,18 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './src/assets/root/favicon.ico', to: '' },
+                { from: './src/assets/root/logo192.png', to: '' },
+                { from: './src/assets/root/logo512.png', to: '' },
+                { from: './src/manifest.json', to: '' }
+            ]
+        }),
+        new InjectManifest({
+            swSrc: './src/src-sw.js',
+            swDest: 'sw.js'
+        }),
         new CompressionPlugin({
             filename: '[path][base].gz',
             algorithm: 'gzip',
@@ -179,8 +192,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', 'public/index.html'),
-            favicon: path.resolve(__dirname, '..', 'public/favicon.ico'),
-            manifest: path.resolve(__dirname, '..', 'public/manifest.json')
+            favicon: path.resolve(__dirname, '..', './src/assets/root/favicon.ico')
         }),
         // new MiniCssExtractPlugin({
         //     filename: 'styles.[contenthash].css',
@@ -196,11 +208,6 @@ module.exports = {
         //     clientsClaim: true,
         //     skipWaiting: true
         // }),
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         { from: 'public/assets', to: 'assets' },
-        //         { from: 'public/manifest.json', to: 'manifest.json' }
-        //     ]
-        // })
+
     ]
 };

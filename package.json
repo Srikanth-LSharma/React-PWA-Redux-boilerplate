@@ -31,19 +31,19 @@
     "workbox-range-requests": "^6.6.0",
     "workbox-routing": "^6.6.0",
     "workbox-strategies": "^6.6.0",
-    "workbox-streams": "^6.6.0"
+    "workbox-streams": "^6.6.0",
+    "workbox-window": "^7.0.0"
   },
   "scripts": {
     "dev": "rimraf build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "env-cmd -f .env.development webpack-dev-server --history-api-fallback --config=./config/webpack.dev.js --open",
+    "build": "env-cmd -f .env.development npm run dev && webpack --config=./config/webpack.dev.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write './**/*.{js,jsx,md,json}' --config ./.prettierrc",
-    "prepare": "husky install",
-    "postbuild": "node config/copyFiles.js"
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -65,6 +65,7 @@
   },
   "devDependencies": {
     "compression-webpack-plugin": "^10.0.0",
+    "copy-webpack-plugin": "^12.0.2",
     "dotenv-webpack": "^8.0.1",
     "env-cmd": "^10.1.0",
     "esbuild-loader": "^4.0.2",
@@ -79,12 +80,15 @@
     "husky": "^8.0.0",
     "image-minimizer-webpack-plugin": "^3.8.3",
     "imagemin": "^8.0.1",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "lint-staged": "^15.2.0",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.1.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
-    "webpack-merge": "^5.10.0"
+    "webpack-merge": "^5.10.0",
+    "workbox-webpack-plugin": "^7.0.0"
   },
   "husky": {
     "hooks": {
