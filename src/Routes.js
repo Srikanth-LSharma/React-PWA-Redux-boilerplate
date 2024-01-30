@@ -6,14 +6,15 @@ import urls from './constants/routes.json';
 import Home from './containers/Home';
 import About from './containers/About';
 import Contact from './containers/Contact';
+import NotFound from './containers/pageNotFound';
 
 function AppRouter() {
-    console.log("Test commit for github push");
     return (
         <Routes>
             <Route exact path={urls?.HOME} element={<Home />} />
             <Route exact path={urls?.ABOUT} element={<About />} />
             <Route exact path={urls?.CONTACT} element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     )
 }
