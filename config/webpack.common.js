@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const CompressionPlugin = require('compression-webpack-plugin');
 const { EsbuildPlugin } = require('esbuild-loader');
+// const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     mode: process.env.REACT_APP_WEBPACK_MODE,
@@ -168,17 +168,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new CompressionPlugin({
-            filename: '[path][base].gz',
-            algorithm: 'gzip',
-            test: /\.js$|\.css$|\.html$/,
-            threshold: 10240,
-            minRatio: 0.8
-        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '..', 'public/index.html'),
-            favicon: path.resolve(__dirname, '..', 'public/favicon.ico'),
-            manifest: path.resolve(__dirname, '..', 'public/manifest.json')
+            favicon: path.resolve(__dirname, '..', './src/assets/root/favicon.ico')
         }),
         // new MiniCssExtractPlugin({
         //     filename: 'styles.[contenthash].css',
@@ -187,5 +179,13 @@ module.exports = {
         new Dotenv({
             path: path.resolve(__dirname, '..', '.env.development')
         })
+        // ,
+        // new WorkboxPlugin.GenerateSW({
+        //     // these options encourage the ServiceWorkers to get in there fast
+        //     // and not allow any straggling "old" SWs to hang around
+        //     clientsClaim: true,
+        //     skipWaiting: true
+        // }),
+
     ]
 };
