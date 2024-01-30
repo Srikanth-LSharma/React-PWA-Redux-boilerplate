@@ -7,6 +7,7 @@ import Astronaut from '../../assets/NotFound/astronaut.svg';
 import Moon from '../../assets/NotFound/moon.svg';
 import Rocket from '../../assets/NotFound/rocket.svg';
 import Earth from '../../assets/NotFound/earth.svg'
+import { withRouter } from '../../components/withRouter';
 
 function NotFound(props) {
     return (
@@ -40,4 +41,4 @@ function NotFound(props) {
     )
 }
 
-export default NotFound;
+export default withRouter(NotFound);

@@ -8,7 +8,6 @@ export const Home = (props) => {
 };
 
 Home.propTypes = {
-  second: PropTypes.third
 };
 
 // const mapStateToProps = (state) => ({});
