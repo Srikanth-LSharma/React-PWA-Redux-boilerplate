@@ -13,6 +13,17 @@ DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
 @-moz-keyframes spin-earth { 100% { -moz-transform: rotate(-360deg); transition: transform 20s;  } }
 @-webkit-keyframes spin-earth { 100% { -webkit-transform: rotate(-360deg); transition: transform 20s;  } }
 @keyframes spin-earth{ 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); transition: transform 20s; } }
+@keyframes moon-movement {
+    0% {
+        transform: rotate(0deg) translate(150px, 0); /* Start with a circular motion */
+    }
+    50% {
+        transform: rotate(-180deg) translate(150px, 0); /* Half circle */
+    }
+    100% {
+        transform: rotate(-360deg) translate(150px, 0); /* End with elliptical motion */
+    }
+}
 
 @-moz-keyframes move-astronaut {
     100% { -moz-transform: translate(-160px, -160px);}
@@ -186,17 +197,17 @@ li a:hover {
     top: 20%;
     left: 15%;
     z-index: 90;
-/*    animation: spin-earth 100s infinite linear both;*/
+   animation: spin-earth 100s infinite linear both;
 }
 
 .object_moon{
     position: absolute;
-    top: 12%;
-    left: 25%;
-/*
-    transform: rotate(0deg);
-    transition: transform ease-in 99999999999s;
-*/
+    top: 20%;
+    left: 15%;
+
+    transform: rotate(45deg);
+    transition: transform ease-in 999999s;
+    animation: moon-movement 65s linear infinite both running;
 }
 
 

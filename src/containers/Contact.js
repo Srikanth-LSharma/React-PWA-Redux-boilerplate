@@ -8,7 +8,6 @@ export const Contact = (props) => {
 };
 
 Contact.propTypes = {
-  second: PropTypes.third
 };
 
 // const mapStateToProps = (state) => ({});
