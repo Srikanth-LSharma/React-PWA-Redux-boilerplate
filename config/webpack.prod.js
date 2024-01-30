@@ -18,14 +18,18 @@ module.exports = merge(commonConfig, {
     },
     devtool: 'eval-cheap-module-source-map',
     devServer: {
-        compress: true
+        compress: true,
+        historyApiFallback: true,
+        contentBase: './',
+        hot: true
     },
     entry: {
         Bundle: path.resolve(__dirname, '..', './src/index.js')
     },
     output: {
         path: path.resolve(__dirname, '..', 'build'),
-        filename: '[name].[chunkhash].js'
+        filename: '[name].[chunkhash].js',
+        publicPath: '/'
     },
     plugins: [
         new CopyWebpackPlugin({
@@ -33,7 +37,8 @@ module.exports = merge(commonConfig, {
                 { from: './src/assets/root/favicon.ico', to: '' },
                 { from: './src/assets/root/logo192.png', to: '' },
                 { from: './src/assets/root/logo512.png', to: '' },
-                { from: './src/manifest.json', to: '' }
+                { from: './src/manifest.json', to: '' },
+                { from: './public/web.config', to: '' }
             ]
         }),
         new InjectManifest({
