@@ -20,8 +20,9 @@ Responsive design for cross-device compatibility
 Optimized performance for superior user experience
 
 # Tech Used
- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Static Badge](https://img.shields.io/badge/PWA-green.svg?style=for-the-badge&logo=PWA&logoColor=%235f17ca&labelColor=white&color=%23eeeeee)
- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![Static Badge](https://img.shields.io/badge/Workbox-green.svg?style=for-the-badge&logo=workbox&logoColor=black&labelColor=black&color=%20%23f58008)
+ ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Static Badge](https://img.shields.io/badge/Progressive%20Web%20App-green.svg?style=for-the-badge&logo=PWA&logoColor=%235f17ca&labelColor=%23eeeeee&color=%23eeeeee)
+ ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white) ![Static Badge](https://img.shields.io/badge/Redux%20Toolkit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+ ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![Static Badge](https://img.shields.io/badge/Workbox-green.svg?style=for-the-badge&logo=workbox&logoColor=black&labelColor=black&color=%20%23f58008)
 
       
 # Add More Details:
