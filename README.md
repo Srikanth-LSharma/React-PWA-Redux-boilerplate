@@ -12,11 +12,23 @@ A standalone boilerplate for building Progressive Web Apps (PWAs) using React. T
 
 ## Features
 
-React framework for modern web development
-Progressive Web App (PWA) support with pre-configured offline functionality
-Service worker integration for seamless caching and improved performance
-Workbox integration with webpack for faster build times and smoother development experience
-Optimized performance for superior user experience
+- **React framework for modern web development**
+
+- **Progressive Web App (PWA) support with pre-configured offline functionality**
+
+- **Service worker integration for seamless caching and improved performance**
+
+- **Workbox integration with webpack for faster build and smoother development experience**
+
+- **Addition of ESLint and Pre-commits for better code quality**
+
+- **Integration of redux-toolkit for state management**
+
+- **Pre-configured application routing with the addition of an animated `404 Not Found` page**
+- **Usage of interceptors for handling API calls**
+
+
+
 
 ## Tech Used
  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Static Badge](https://img.shields.io/badge/Progressive%20Web%20App-green.svg?style=for-the-badge&logo=PWA&logoColor=%235f17ca&labelColor=%23eeeeee&color=%23eeeeee)
