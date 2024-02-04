@@ -20,11 +20,7 @@
 
 ## :book: Code of Conduct
 
-Please review our [Code of Conduct](https://github.com/jessesquires/.github/blob/main/CODE_OF_CONDUCT.md). It is in effect at all times. We expect it to be honored by everyone who contributes to this project. Acting like an asshole will not be tolerated.
-
-## :bulb: Asking Questions
-
-See our [Support Guide](https://github.com/jessesquires/.github/blob/main/SUPPORT.md). In short, GitHub issues are not the appropriate place to debug your specific project, but should be reserved for filing bugs and feature requests.
+Please review our [Code of Conduct](https://github.com/Srikanth-LSharma/React-PWA-Redux-boilerplate/blob/master/CODE_OF_CONDUCT.md). It is in effect at all times. We expect it to be honored by everyone who contributes to this project. Acting like an asshole will not be tolerated.
 
 ## :inbox_tray: Opening an Issue
 
@@ -32,7 +28,7 @@ Before [creating an issue](https://help.github.com/en/github/managing-your-work-
 
 ### :lock: Reporting Security Issues
 
-Review our [Security Policy](https://github.com/jessesquires/.github/blob/main/SECURITY.md). **Do not** file a public issue for security vulnerabilities.
+Review our [Security Policy](https://github.com/Srikanth-LSharma/React-PWA-Redux-boilerplate/blob/master/SECURITY.md). **Do not** file a public issue for security vulnerabilities.
 
 ### :beetle: Bug Reports and Other Issues
 
@@ -40,7 +36,7 @@ A great way to contribute to the project is to send a detailed issue when you en
 
 In short, since you are most likely a developer, **provide a ticket that you would like to receive**.
 
-- **Review the documentation and [Support Guide](https://github.com/jessesquires/.github/blob/main/SUPPORT.md)** before opening a new issue.
+- **Review the documentation** before opening a new issue.
 
 - **Do not open a duplicate issue!** Search through existing issues to see if your issue has previously been reported. If your issue exists, comment with any additional information you have. You may simply note "I have this problem too", which helps prioritize the most common problems and requests. 
 
@@ -86,7 +82,7 @@ For most contributions, after your first pull request is accepted and merged, yo
 
 - **Add documentation.** Document your changes with code doc comments or in existing guides.
 
-- **Update the CHANGELOG** for all enhancements and bug fixes. Include the corresponding issue number if one exists, and your GitHub username. (example: "- Fixed crash in profile view. #123 @jessesquires")
+- **Update the CHANGELOG** for all enhancements and bug fixes. Include the corresponding issue number if one exists, and your GitHub username. (example: "- Fixed crash in profile view. #123 @Srikanth-LSharma")
 
 - **Use the repo's default branch.** Branch from and [submit your pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) to the repo's default branch. Usually this is `main`, but it could be `dev`, `develop`, or `master`.
 
@@ -180,10 +176,6 @@ If you are reading this, bravo dear user and (hopefully) contributor for making 
 To confirm that you have read this guide and are following it as best as possible, **include this emoji at the top** of your issue or pull request: :black_heart: `:black_heart:`
 
 ## :pray: Credits
-
-Written by [@jessesquires](https://github.com/jessesquires). 
-
-**Please feel free to adopt this guide in your own projects. Fork it wholesale or remix it for your needs.**
 
 *Many of the ideas and prose for the statements in this document were based on or inspired by work from the following communities:*
 
