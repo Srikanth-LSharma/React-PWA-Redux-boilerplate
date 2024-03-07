@@ -7,6 +7,7 @@ const commonConfig = require('./webpack.common');
 // const { EsbuildPlugin } = require('esbuild-loader');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+
 module.exports = merge(commonConfig, {
     mode: 'development',
     performance: {
